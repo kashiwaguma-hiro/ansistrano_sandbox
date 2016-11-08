@@ -4,6 +4,8 @@ services:
     build: ./ansible
     ports:
      - "2222:22"
+    volumes:
+     - ./ansible:/opt
   web1:
     build: ./web
     ports:
