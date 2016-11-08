@@ -1,0 +1,24 @@
+version: '2'
+services:
+  ansible:
+    build: ./ansible
+    ports:
+     - "2222:22"
+  web1:
+    build: ./web
+    ports:
+     - "2223:22"
+  web2:
+    build: ./web
+    ports:
+     - "2224:22"
+  batch:
+    build: ./batch
+    ports:
+     - "2225:22"
+  batch2:
+    build: ./batch
+    ports:
+     - "2226:22"
+networks:
+  default:
