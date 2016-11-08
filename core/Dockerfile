@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 # powerd by https://docs.docker.com/engine/examples/running_ssh_service/
 MAINTAINER Sven Dowideit <SvenDowideit@docker.com>
 
-RUN apt-get update && apt-get install -y openssh-server
+RUN apt-get update && apt-get install -y openssh-server python-dev
 RUN mkdir /var/run/sshd
 RUN echo 'root:rootroot' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config

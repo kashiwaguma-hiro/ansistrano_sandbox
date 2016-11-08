@@ -1,0 +1,11 @@
+[webs]
+ansistranosandbox_web1_1
+ansistranosandbox_web2_1
+
+[batchs]
+ansistranosandbox_batch_1
+ansistranosandbox_batch2_1
+
+[all:vars]
+ansible_ssh_user=root
+ansible_ssh_pass=rootroot
