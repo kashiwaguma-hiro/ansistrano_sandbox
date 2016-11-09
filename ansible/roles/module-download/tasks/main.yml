@@ -1,0 +1,7 @@
+---
+- name: ANSISTRANO | module-get | Download artifact
+  get_url:
+    url: "{{ ansistrano_get_url }}"
+    dest: "{{ download_dir }}/{{ ansistrano_get_url | basename }}"
+    force: yes 
+  delegate_to: 127.0.0.1

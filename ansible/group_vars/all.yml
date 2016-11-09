@@ -1,9 +1,8 @@
 ---
-ansistrano_deploy_to: /opt/app
-ansistrano_shared_paths:
-  - cache
-  - logs
-  - tmp
+download_dir: /tmp
+ansistrano_deploy_from: "{{ download_dir }}/master.zip"
+ansistrano_deploy_to: /opt/
+ansistrano_current_dir: app
 ansistrano_allow_anonymous_stats: no
 ansistrano_keep_releases: 5
 ansistrano_get_url:  https://github.com/kashiwaguma-hiro/ansistrano_sandbox/archive/master.zip
