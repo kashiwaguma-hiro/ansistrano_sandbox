@@ -16,5 +16,7 @@ RUN ansible-galaxy install carlosbuenosvinos.ansistrano-deploy carlosbuenosvinos
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
+WORKDIR /opt
+
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]

@@ -17,3 +17,9 @@ $ docker-compose build
 ```bash
 $ docker-compose up -d
 ```
+
+4. deploy execute
+```bash
+$ docker exec -it ansistranosandbox_ansible_1
+$ ansible-playbook -i hosts deploy.yml -c paramiko
+```

@@ -1,8 +1,6 @@
 ---
 - hosts: all
-#  become: yes
-#  become_user: root
   vars:
-    ansistrano_deploy_via: git
+    ansistrano_deploy_via: download
   roles:
     - carlosbuenosvinos.ansistrano-deploy
