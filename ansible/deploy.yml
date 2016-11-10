@@ -1,8 +1,4 @@
 ---
 - hosts: all
-  vars:
-    ansistrano_deploy_via: copy
   roles:
-    # Download artifact
-    - module-download
     - carlosbuenosvinos.ansistrano-deploy
