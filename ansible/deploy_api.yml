@@ -1,0 +1,10 @@
+---
+- hosts: apis
+  serial: 1
+  any_errors_fatal: True
+  roles:
+# stop zabbix
+    - create_mainte
+    - carlosbuenosvinos.ansistrano-deploy
+    - remove_mainte
+# start zabbix

@@ -1,0 +1,3 @@
+---
+- name: ACCOUNTING | remove file | Remove file
+  file:  path={{ mainte_file_dest }} state=absent

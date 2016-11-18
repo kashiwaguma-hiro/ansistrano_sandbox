@@ -1,0 +1,5 @@
+---
+ansistrano_current_dir: api
+mainte_file_src: /tmp/src/mainte.html
+mainte_file_dest: /tmp/dest/
+
