@@ -7,4 +7,4 @@ ansistrano_before_update_code_tasks_file: '{{ playbook_dir }}/roles/download/tas
 ansistrano_current_dir: app
 ansistrano_allow_anonymous_stats: no
 ansistrano_keep_releases: 5
-ansistrano_get_url:  https://github.com/kashiwaguma-hiro/ansistrano_sandbox/archive/master.zip
+ansistrano_get_url:  https://github.com/curl/curl/archive/master.zip
