@@ -1,8 +1,0 @@
----
-- hosts: batchs
-  serial: 1
-  any_errors_fatal: True
-  roles:
-# stop zabbix
-    - carlosbuenosvinos.ansistrano-deploy
-# start zabbix

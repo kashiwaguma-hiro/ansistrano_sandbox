@@ -1,0 +1,6 @@
+---
+ansistrano_current_dir: batch
+
+# Hooks: custom tasks if you need them
+# ansistrano_before_update_code_tasks_file: "{{ playbook_dir }}/roles/stop_subscriber/tasks/main.yml"
+# ansistrano_after_symlink_tasks_file: "{{ playbook_dir }}/roles/start_subscriber/tasks/main.yml"

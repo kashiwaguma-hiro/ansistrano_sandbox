@@ -1,5 +1,11 @@
 ---
 ansistrano_current_dir: api
 mainte_file_src: /tmp/src/mainte.html
-mainte_file_dest: /tmp/dest/
+mainte_file_dest: /tmp/dest/mainte.html
 
+# Hooks: custom tasks if you need them
+ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/roles/create_mainte/tasks/main.yml"
+# ansistrano_before_update_code_tasks_file: "{{ playbook_dir }}/roles/stop_api/tasks/main.yml"
+# ansistrano_after_symlink_tasks_file: "{{ playbook_dir }}/roles/start_api/tasks/main.yml"
+# ansistrano_before_cleanup_tasks_file: "{{ playbook_dir }}/roles/check_api/tasks/main.yml"
+ansistrano_after_cleanup_tasks_file: "{{ playbook_dir }}/roles/remove_mainte/tasks/main.yml"

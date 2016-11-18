@@ -1,8 +1,12 @@
 [apis]
-ansistranosandbox_web1_1
-ansistranosandbox_web2_1
+ansistranosandbox_api1_1
+ansistranosandbox_api2_1
 
 [batchs]
+ansistranosandbox_batch_1
+ansistranosandbox_batch2_1
+
+[subscribers]
 ansistranosandbox_batch_1
 ansistranosandbox_batch2_1
 

@@ -21,5 +21,5 @@ $ docker-compose up -d
 4. deploy execute
 ```bash
 $ docker exec -it ansistranosandbox_ansible_1
-$ ansible-playbook -i hosts deploy.yml -c paramiko
+$ ansible-playbook -i local deploy.yml -c paramiko
 ```

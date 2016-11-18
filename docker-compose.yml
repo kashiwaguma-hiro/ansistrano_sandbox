@@ -6,12 +6,12 @@ services:
      - "2222:22"
     volumes:
      - ./ansible:/opt
-  web1:
-    build: ./web
+  api1:
+    build: ./api
     ports:
      - "2223:22"
-  web2:
-    build: ./web
+  api2:
+    build: ./api
     ports:
      - "2224:22"
   batch:
