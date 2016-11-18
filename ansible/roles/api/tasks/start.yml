@@ -1,0 +1,6 @@
+---
+# TODO start api
+
+# TODO check api
+
+- include: "{{ playbook_dir }}/roles/remove_mainte/tasks/main.yml"

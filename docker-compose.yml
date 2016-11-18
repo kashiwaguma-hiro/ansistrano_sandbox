@@ -2,25 +2,15 @@ version: '2'
 services:
   ansible:
     build: ./ansible
-    ports:
-     - "2222:22"
     volumes:
      - ./ansible:/opt
   api1:
     build: ./api
-    ports:
-     - "2223:22"
   api2:
     build: ./api
-    ports:
-     - "2224:22"
-  batch:
+  batch1:
     build: ./batch
-    ports:
-     - "2225:22"
   batch2:
     build: ./batch
-    ports:
-     - "2226:22"
 networks:
   default:
