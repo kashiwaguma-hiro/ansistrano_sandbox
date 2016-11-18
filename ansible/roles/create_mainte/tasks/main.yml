@@ -3,3 +3,5 @@
   command: cp -p {{ mainte_file_src }} {{ mainte_file_dest }}
   args:
     creates: mainte_file_dest
+  tags:
+    - create_mainte
