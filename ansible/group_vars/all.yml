@@ -1,7 +1,7 @@
 ---
 # Download setting.
 download_dir: /tmp
-ansistrano_get_url:  https://github.com/curl/curl/archive/master.zip
+artifact_base_url:  https://github.com/curl/curl/archive
 
 # Ansistrano setting.
 ansistrano_deploy_via: copy

@@ -1,3 +1,7 @@
 ---
+# Download setting.
+artifact_url:  "{{ artifact_base_url }}/{{ batch_module_name }}?v={{ version | default('latest') }}"
+batch_module_name : master.zip
+
 # Ansistrano setting.
 ansistrano_deploy_to: /opt/batch/bin/
