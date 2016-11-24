@@ -1,2 +1,3 @@
 ---
-ansistrano_current_dir: batch
+# Ansistrano setting.
+ansistrano_deploy_to: /opt/batch/bin/

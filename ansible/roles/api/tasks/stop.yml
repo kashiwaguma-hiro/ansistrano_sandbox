@@ -1,4 +1,4 @@
 ---
-- include: "{{ playbook_dir }}/roles/create_mainte/tasks/main.yml"
+- include: "{{ playbook_dir }}/roles/api/tasks/unmainte.yml"
 
 # TODO stop api

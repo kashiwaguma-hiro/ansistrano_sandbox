@@ -1,8 +1,7 @@
 ---
-ansistrano_current_dir: batch
-
-# Hooks: custom tasks if you need them
-# ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/roles/zabbix_mainte/tasks/off.yml"
+# Ansistrano setting.
+ansistrano_deploy_to: /opt/batch/bin/
+ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/roles/zabbix/tasks/mainte_off.yml"
 # ansistrano_before_symlink_tasks_file: "{{ playbook_dir }}/roles/subscriber/tasks/stop.yml"
 # ansistrano_after_symlink_tasks_file: "{{ playbook_dir }}/roles/subscriber/tasks/start.yml"
-# ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/roles/zabbix_mainte/tasks/on.yml"
+ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/roles/zabbix/tasks/mainte_on.yml"

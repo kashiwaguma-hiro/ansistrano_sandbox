@@ -29,7 +29,7 @@ $ ansible-playbook -i local deploy.yml -c paramiko
 ## create mainte.html only.
 Try it command.
 ```bash
-ansible-playbook -i local -l apis --tags "create_mainte" deploy.yml  -c paramiko
+ansible-playbook -i local -l apis --tags "mainte" deploy.yml  -c paramiko
 ```
 
 Check apis hosts, successed crate mainte.html.
@@ -41,7 +41,7 @@ mainte.html
 ## remove mainte.html only for ansistranosandbox_api2_1.
 Try it command.
 ```bash
-ansible-playbook -i local -l ansistranosandbox_api2_1 --tags "remove_mainte" deploy.yml  -c paramiko
+ansible-playbook -i local -l ansistranosandbox_api2_1 --tags "unmainte" deploy.yml  -c paramiko
 ```
 
 Check ansistranosandbox_api2_1 hosts, successed remove mainte.html.

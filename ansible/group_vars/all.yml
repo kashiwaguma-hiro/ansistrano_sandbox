@@ -1,10 +1,11 @@
 ---
+# Download setting.
 download_dir: /tmp
+ansistrano_get_url:  https://github.com/curl/curl/archive/master.zip
+
+# Ansistrano setting.
 ansistrano_deploy_via: copy
 ansistrano_deploy_from: "{{ download_dir }}/master.zip"
-ansistrano_deploy_to: /opt/
-ansistrano_before_update_code_tasks_file: '{{ playbook_dir }}/roles/download/tasks/before_update_code.yml'
-ansistrano_current_dir: app
+ansistrano_keep_releases: 3
 ansistrano_allow_anonymous_stats: no
-ansistrano_keep_releases: 5
-ansistrano_get_url:  https://github.com/curl/curl/archive/master.zip
+ansistrano_before_update_code_tasks_file: '{{ playbook_dir }}/roles/download/tasks/before_update_code.yml'

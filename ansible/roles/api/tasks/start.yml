@@ -3,4 +3,4 @@
 
 # TODO check api
 
-- include: "{{ playbook_dir }}/roles/remove_mainte/tasks/main.yml"
+- include: "{{ playbook_dir }}/roles/api/tasks/mainte.yml"

@@ -1,10 +1,11 @@
 ---
-ansistrano_current_dir: api
+# Mainte setting.
 mainte_file_src: /tmp/src/mainte.html
 mainte_file_dest: /tmp/dest/mainte.html
 
-# Hooks: custom tasks if you need them
-# ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/roles/zabbix_mainte/tasks/off.yml"
+# Ansistrano setting.
+ansistrano_deploy_to: /opt/api/bin/
+ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/roles/api/tasks/release_init.yml"
 ansistrano_before_symlink_tasks_file: "{{ playbook_dir }}/roles/api/tasks/stop.yml"
 ansistrano_after_symlink_tasks_file: "{{ playbook_dir }}/roles/api/tasks/start.yml"
-# ansistrano_after_cleanup_tasks_file: "{{ playbook_dir }}/roles/zabbix_mainte/tasks/on.yml"
+ansistrano_after_cleanup_tasks_file: "{{ playbook_dir }}/roles/api/tasks/release_term.yml"
