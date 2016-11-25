@@ -1,11 +1,11 @@
 ---
 # Download setting.
 download_dir: /tmp
-artifact_base_url:  https://github.com/curl/curl/archive
+artifact_download_url:  "https://github.com/curl/curl/archive/{{ module_name }}?v={{ version | default('latest') }}"
 
 # Ansistrano setting.
 ansistrano_deploy_via: copy
-ansistrano_deploy_from: "{{ download_dir }}/master.zip"
+ansistrano_deploy_from: "{{ download_dir }}/{{ module_name }}"
 ansistrano_keep_releases: 3
 ansistrano_allow_anonymous_stats: no
-ansistrano_before_update_code_tasks_file: '{{ playbook_dir }}/roles/download/tasks/before_update_code.yml'
+ansistrano_before_update_code_tasks_file: '{{ playbook_dir }}/roles/artifact/tasks/download.yml'

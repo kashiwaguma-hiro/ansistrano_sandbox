@@ -1,0 +1,25 @@
+[apis]
+ansistranosandbox_api1_1
+ansistranosandbox_api2_1
+
+[batchs]
+ansistranosandbox_batch1_1
+ansistranosandbox_batch2_1
+
+[subscribers]
+ansistranosandbox_batch1_1
+ansistranosandbox_batch2_1
+
+[all:vars]
+ansible_ssh_user=root
+ansible_ssh_pass=rootroot
+
+[apis:vars]
+# Exclude load_balancer tasks on development enviroment.
+ansistrano_before_setup_tasks_file="{{ playbook_dir }}/roles/api/tasks/mainte.yml"
+ansistrano_after_cleanup_tasks_file="{{ playbook_dir }}/roles/api/tasks/unmainte.yml"
+
+[subscribers:vars]
+# Nothing todo on development enviroment.
+ansistrano_before_setup_tasks_file=""
+ansistrano_after_cleanup_tasks_file=""

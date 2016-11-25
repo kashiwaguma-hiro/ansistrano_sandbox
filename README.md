@@ -18,19 +18,13 @@ $ docker-compose build
 $ docker-compose up -d
 ```
 
-4. deploy execute
+4. deploy execute on local enviroment
 ```bash
-$ docker exec -it ansistranosandbox_ansible_1
+$ docker exec -it ansistranosandbox_ansible_1 bash
 $ ansible-playbook -i local deploy.yml -c paramiko
 ```
 
 # optional
-
-## Specific subscriber module name and version.
-```bash
-$ ansible-playbook -i local  --extra-vars "subscriber_module_name=subscriber_alt.zip version=1.2.2" deploy.yml -c paramiko
-```
-
 ## create mainte.html only.
 ```bash
 $ ansible-playbook -i local -l apis --tags "mainte" deploy.yml  -c paramiko

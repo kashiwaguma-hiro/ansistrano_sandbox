@@ -1,11 +1,14 @@
 ---
 # Download setting.
-artifact_url:  "{{ artifact_base_url }}/{{ api_module_name }}?v={{ version | default('latest') }}"
-api_module_name : master.zip
+module_name : master.zip
 
 # Mainte setting.
 mainte_file_src: /tmp/src/mainte.html
 mainte_file_dest: /tmp/dest/mainte.html
+
+# HealthCheck setting.
+health_check_ng_file_src: /tmp/src/health_check_ng.html
+health_check_ng_file_dest: /tmp/dest/health_check_ng.html
 
 # Ansistrano setting.
 ansistrano_deploy_to: /opt/api/bin/
