@@ -1,4 +1,4 @@
 ---
 - include: "{{ playbook_dir }}/roles/nginx/tasks/unmainte.yml"
 
-# TODO stop api
+# TODO call stop api script

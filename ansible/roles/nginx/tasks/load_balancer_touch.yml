@@ -1,5 +1,5 @@
 ---
-- name: ACCOUNTING | load balancer touch | Remove file
+- name: ACCOUNTING | load balancer touch | Remove health_check_ng file
   file:  path={{ health_check_ng_file_dest }} state=absent
   tags:
     - load_balancer_touch

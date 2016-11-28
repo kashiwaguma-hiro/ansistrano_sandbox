@@ -1,6 +1,6 @@
 ---
-# TODO start api
+# TODO call start api script
 
-# TODO check api
+# TODO call check api script
 
 - include: "{{ playbook_dir }}/roles/nginx/tasks/mainte.yml"

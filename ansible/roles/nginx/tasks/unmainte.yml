@@ -1,5 +1,5 @@
 ---
-- name: ACCOUNTING | unmainte | Remove file
+- name: ACCOUNTING | unmainte | Remove mainte file
   file:  path={{ mainte_file_dest }} state=absent
   tags:
     - unmainte

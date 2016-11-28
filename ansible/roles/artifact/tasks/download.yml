@@ -1,5 +1,5 @@
 ---
-- name: ANSISTRANO | download | Download artifact
+- name: ANSISTRANO | download | Download artifact to local
   get_url:
     url: "{{ artifact_download_url }}"
     dest: "{{ download_dir }}/{{ module_name }}"
