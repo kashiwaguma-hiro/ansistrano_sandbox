@@ -16,8 +16,8 @@ ansible_ssh_pass=rootroot
 
 [apis:vars]
 # Exclude load_balancer tasks on development enviroment.
-ansistrano_before_setup_tasks_file="{{ playbook_dir }}/roles/api/tasks/mainte.yml"
-ansistrano_after_cleanup_tasks_file="{{ playbook_dir }}/roles/api/tasks/unmainte.yml"
+ansistrano_before_setup_tasks_file="{{ playbook_dir }}/roles/nginx/tasks/mainte.yml"
+ansistrano_after_cleanup_tasks_file="{{ playbook_dir }}/roles/nginx/tasks/unmainte.yml"
 
 [subscribers:vars]
 # Nothing todo on development enviroment.

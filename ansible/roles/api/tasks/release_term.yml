@@ -1,3 +1,4 @@
 ---
-- include: "{{ playbook_dir }}/roles/api/tasks/unmainte.yml"
-- include: "{{ playbook_dir }}/roles/api/tasks/load_balancer_touch.yml"
+- include: "{{ playbook_dir }}/roles/nginx/tasks/unmainte.yml"
+- include: "{{ playbook_dir }}/roles/nginx/tasks/load_balancer_touch.yml"
+- include: "{{ playbook_dir }}/roles/zabbix/tasks/mainte_mode_off.yml"
