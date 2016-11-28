@@ -1,7 +1,4 @@
 ---
-# Artifact setting.
-module_name : master.zip
-
 # Ansistrano setting.
 ansistrano_deploy_to: "/opt/batch/bin/{{ major_version }}/{{ module_name }}"
 ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/roles/zabbix/tasks/mainte_mode_off.yml"

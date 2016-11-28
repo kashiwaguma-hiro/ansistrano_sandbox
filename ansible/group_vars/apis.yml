@@ -1,7 +1,4 @@
 ---
-# Artifact setting.
-module_name : master.zip
-
 # Mainte setting.
 mainte_file_src: /tmp/src/mainte.html
 mainte_file_dest: /tmp/dest/mainte.html

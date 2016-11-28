@@ -21,7 +21,21 @@ $ docker-compose up -d
 4. deploy execute on local enviroment
 ```bash
 $ docker exec -it ansistranosandbox_ansible_1 bash
-$ ansible-playbook -i local deploy.yml -c paramiko
+```
+
+Deploy apis.
+```bash
+$ ansible-playbook -i local deploy_v1_apis.yml -c paramiko
+```
+
+Deploy batchs.
+```bash
+$ ansible-playbook -i local deploy_v1_batchs.yml --extra-vars "module_name=batch_1.zip" -c paramiko
+```
+
+Deploy subscribeers.
+```bash
+$ ansible-playbook -i local deploy_v1_subscribers.yml --extra-vars "module_name=subscriber_1.zip" -c paramiko
 ```
 
 # optional
