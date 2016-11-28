@@ -23,19 +23,19 @@ $ docker-compose up -d
 $ docker exec -it ansistranosandbox_ansible_1 bash
 ```
 
-Deploy apis.
+Deploy to apis.
 ```bash
-$ ansible-playbook -i local deploy_v1_apis.yml -c paramiko
+$ ansible-playbook -i local -l apis deploy.yml --extra-vars "major_version=v1 module_name=master.zip" -c paramiko
 ```
 
-Deploy batchs.
+Deploy to batchs.
 ```bash
-$ ansible-playbook -i local deploy_v1_batchs.yml --extra-vars "module_name=batch_1.zip" -c paramiko
+$ ansible-playbook -i local -l batchs deploy.yml --extra-vars "major_version=v1 module_name=master.zip" -c paramiko
 ```
 
-Deploy subscribeers.
+Deploy to subscribeers.
 ```bash
-$ ansible-playbook -i local deploy_v1_subscribers.yml --extra-vars "module_name=subscriber_1.zip" -c paramiko
+$ ansible-playbook -i local -l subscribers deploy.yml --extra-vars "major_version=v1 module_name=master.zip" -c paramiko
 ```
 
 # optional
