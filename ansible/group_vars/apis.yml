@@ -1,5 +1,5 @@
 ---
-# Download setting.
+# Artifact setting.
 module_name : master.zip
 
 # Mainte setting.
@@ -11,7 +11,7 @@ health_check_ng_file_src: /tmp/src/health_check_ng.html
 health_check_ng_file_dest: /tmp/dest/health_check_ng.html
 
 # Ansistrano setting.
-ansistrano_deploy_to: /opt/api/bin/
+ansistrano_deploy_to: /opt/api/bin/{{ major_version }}
 ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/roles/api/tasks/release_init.yml"
 ansistrano_before_symlink_tasks_file: "{{ playbook_dir }}/roles/api/tasks/stop.yml"
 ansistrano_after_symlink_tasks_file: "{{ playbook_dir }}/roles/api/tasks/start.yml"

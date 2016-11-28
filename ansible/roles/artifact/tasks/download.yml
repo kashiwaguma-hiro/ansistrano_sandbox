@@ -1,7 +1,13 @@
 ---
-- name: ANSISTRANO | download | Download artifact to local
+- name: ACCOUNTING | create download folder | Create download folder
+  file: 
+    path: "{{ download_dir }}/{{ major_version }}"
+    state: "directory"
+  delegate_to: 127.0.0.1
+
+- name: ACCOUNTING | download | Download artifact to local
   get_url:
     url: "{{ artifact_download_url }}"
-    dest: "{{ download_dir }}/{{ module_name }}"
+    dest: "{{ download_dir }}/{{ major_version }}/{{ module_name }}"
     force: yes 
   delegate_to: 127.0.0.1

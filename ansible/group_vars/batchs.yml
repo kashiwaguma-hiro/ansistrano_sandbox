@@ -1,6 +1,6 @@
 ---
-# Download setting.
+# Artifact setting.
 module_name : master.zip
 
 # Ansistrano setting.
-ansistrano_deploy_to: /opt/batch/bin/
+ansistrano_deploy_to: "/opt/batch/bin/{{ major_version }}/{{ module_name }}"
